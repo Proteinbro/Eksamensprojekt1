@@ -1,0 +1,374 @@
+@import url('https://fonts.cdnfonts.com/css/old-english-five');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 75px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    font-size: 32px;
+    font-family: 'Old English Five', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-bar a{
+    position: relative;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 55px;
+}
+
+.nav-bar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 5%;
+    background: #000;
+}
+
+.nav-bar a:hover:before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 16px 0;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.burger-btn{
+    display: none;
+}
+
+
+.mission{
+    width: 100%;
+    height: 92%;
+}
+
+.mission h1{
+    color: rgb(122, 80, 18);
+    position: absolute;
+    top: 30%;
+    right: 60%;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.mission p{
+    color: #757575;
+    position: absolute;
+    top: 40%;
+    right: 52%;
+    font-size: 18px;
+    font-weight: 200;
+    width: 30%;
+}
+
+.mission-content{
+    position: absolute;
+    top: 30%;
+    right: 15%;
+}
+
+.mission-content img{
+    width: 450px;
+    transform: rotate(90deg);
+}
+
+
+.footer{
+    padding: 25px;
+    background-color: rgb(170, 155, 128);
+    position: absolute;
+    bottom: -20%;
+    width: 100%;
+}
+
+.footer, .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #000;
+}
+
+.social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.3;
+    transition: 0.25s;
+}
+
+.social a:hover{
+    opacity: 1;
+}
+
+.footer h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+
+.footer h1:hover{
+    opacity: 1;
+}
+
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+}
+
+
+.footer, .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mission h1 {
+        right: 40%;
+        font-size: 30px;
+    }
+
+    .mission p {
+        right: 22%;
+        font-size: 16px;
+        width: 65%;
+    }
+
+    .mission-content img {
+        width: 100%;
+    }
+
+    .mission-content{
+        top: 90%;
+    }
+
+    .footer {
+        bottom: -90%;
+    }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mission h1 {
+        right: 40%;
+        font-size: 30px;
+    }
+
+    .mission p {
+        right: 18%;
+        font-size: 16px;
+        width: 65%;
+        height: 40%;
+    }
+
+    .mission-content img {
+        width: 100%;
+    }
+
+    .mission-content{
+        top: 90%;
+        left: 10%;
+    }
+
+    .footer {
+        bottom: -110%;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1350px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+
+
+    .mission p {
+        right: 45%;
+        font-size: 16px;
+        width: 40%;
+        height: 60%;
+    }
+
+
+
+    .mission-content{
+
+        left: 50%;
+    }
+
+    .footer {
+        bottom: -40%;
+    }
+}

@@ -1,0 +1,617 @@
+@import url('https://fonts.cdnfonts.com/css/old-english-five');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 75px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    font-size: 32px;
+    font-family: 'Old English Five', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-bar a{
+    position: relative;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 55px;
+}
+
+.nav-bar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 5%;
+    background: #000;
+}
+
+.nav-bar a:hover:before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+
+   .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 16px 0;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.burger-btn{
+    display: none;
+}
+
+
+.influence{
+    width: 100%;
+    height: 92%;
+}
+
+.influence h1{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    top: 18%;
+    right: 38%;
+    font-size: 45px;
+    font-weight: 1000;
+}
+
+.influence h2{
+    color: rgb(122, 80, 18);
+    position: absolute;
+    top: 38%;
+    right: 24.5%;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.influence h3{
+    color: rgb(187, 135, 47);
+    position: absolute;
+    top: 43%;
+    right: 15.7%;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.influence p{
+    color: #757575;
+    width: 30%;
+    position: absolute;
+    top: 48%;
+    right: 12.8%;
+    font-size: 20px;
+}
+
+.influence-content{
+    position: absolute;
+    top: 35%;
+    left: 13%;
+}
+
+.consumers{
+    position: absolute;
+    top: 92%;
+    width: 100%;
+    height: 645px;
+    background: #3b2907ab;
+}
+
+.consumers-content{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    top: 30%;
+
+}
+
+.consumers h1{
+    position: absolute;
+    top: 8%;
+    left: 28%;
+    font-size: 25px;
+    font-family: 'Old English Five', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.consumers h2{
+    position: absolute;
+    top: 10%;
+    left: 43%;
+    font-size: 25px;
+    color: rgb(122, 80, 18);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.consumers-content h1{
+    font-size: 17px;
+    font-family: serif;
+    font-weight: 500;
+    position: absolute;
+    top: -10%;
+    left: 9%;
+    color: #000;
+}
+
+.consumers-content h2{
+    font-size: 17px;
+    font-family: serif;
+    font-weight: 500;
+    position: absolute;
+    top: -10%;
+    left: 72.5%;
+    color: #000;
+}
+
+.consumers-content h3{
+    font-size: 17px;
+    font-family: serif;
+    font-weight: 500;
+    position: absolute;
+    top: -10%;
+    left: 39%;
+    color: #000;
+}
+
+/* Her laver jeg min "Clickable-effekt", der ændrer op billedet "opacity". Til at gøre det bruger jeg javascript. */
+
+.img-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .img-container img{
+    filter: opacity(60%);
+
+  }
+
+  .kasperssmag{
+    transform: rotate(-90deg);
+  }
+
+  .work{
+    transform: rotate(90deg);
+  }
+
+  .img-container p{
+    color: #000;
+    opacity: 0;
+    font-size: 17px;
+    padding-top: 45px;
+    width: 80%;
+    padding-left: 43px;
+  }
+  
+  .img-container.active img {
+    filter: opacity(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  .img-container.active p {
+    opacity: 1;
+    transition: 0.3s ease-in-out;
+  }
+
+
+  .footer{
+    padding: 25px;
+    background-color: rgb(170, 155, 128);
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+}
+
+.footer, .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #000;
+}
+
+.social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.3;
+    transition: 0.25s;
+}
+
+.social a:hover{
+    opacity: 1;
+}
+
+.footer h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+
+.footer h1:hover{
+    opacity: 1;
+}
+
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+}
+
+
+.footer, .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+  
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .influence-content{
+        position: absolute;
+        top: 70%;
+        left: 3.5%;
+    }
+
+
+    .influence{
+        height: 100%;
+    }
+
+    .influence h1 {
+        right: 28%;
+        font-size: 30px;
+    }
+
+    .influence h2 {
+        right: 26%;
+        top: 35%;
+        font-size: 25px;
+    }
+
+    .influence h3 {
+        right: 11%;
+        top: 40%;
+        font-size: 15px;
+    }
+
+    .influence p {
+        width: 80%;
+        right: 10.8%;
+        font-size: 16px;
+    }
+
+    .consumers{
+        top: 120%;
+    }
+
+    .consumers h1 {
+        left: 5%;
+    }
+
+    .consumers-content h1{
+        left: 30%;
+    }
+
+    .consumers h2 {
+        left: 48%;
+    }
+
+    .consumers-content h2,
+    .consumers-content h3 {
+        display: none;
+    }
+
+     .work{
+        display: none;
+    }
+
+    .kasperssmag{
+        position: relative;
+        left: 20%;
+    }
+
+    .img-container p {
+        display: none;
+    }
+
+    .footer {
+        bottom: -130%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .influence-content{
+        position: absolute;
+        top: 70%;
+        left: 18%;
+    }
+
+
+    .influence{
+        height: 100%;
+    }
+
+    .influence h1 {
+        right: 33%;
+        font-size: 30px;
+    }
+
+    .influence h2 {
+        right: 32%;
+        top: 35%;
+        font-size: 25px;
+    }
+
+    .influence h3 {
+        right: 10%;
+        top: 41%;
+        width: 70%;
+        font-size: 15px;
+    }
+
+    .influence p {
+        width: 70%;
+        height: 20%;
+        right: 10%;
+        font-size: 16px;
+    }
+
+    .consumers{
+        top: 120%;
+    }
+
+    .consumers h1 {
+        left: 14%;
+    }
+
+    .consumers-content h1{
+        left: 40%;
+    }
+
+    .consumers h2 {
+        left: 48%;
+    }
+
+    .consumers-content h2,
+    .consumers-content h3 {
+        display: none;
+    }
+
+     .work{
+        display: none;
+    }
+
+    .kasperssmag{
+        position: relative;
+        left: 25%;
+        width: 50%;
+    }
+
+    .img-container p {
+        display: none;
+    }
+
+    .footer {
+        bottom: -130%;
+    }
+}
+
+
+@media only screen and (min-width: 901px) and (max-width: 1350px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .influence h1 {
+        right: 37%;
+        font-size: 30px;
+    }
+
+    .influence h2 {
+        right: 10%;
+        top: 35%;
+        font-size: 25px;
+    }
+
+    .influence h3 {
+        right: 4.5%;
+        top: 41%;
+        width: 30%;
+        font-size: 15px;
+    }
+
+    .influence p {
+        width: 30%;
+        height: 30%;
+        right: 4.5%;
+        font-size: 16px;
+    }
+
+    .consumers h1 {
+        left: 20%;
+    }
+
+    .consumers-content h1{
+        left: 5%;
+    }
+
+    .consumers-content h2{
+        left: 73%;
+    }
+
+    .consumers-content h3{
+        left: 37%;
+    }
+
+    
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/old-english-five" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css-files/style.css">
+    <title>Trøjborg Bryg</title>
+</head>
+<body>
+    <header class="header">
+
+        <!-- Logo -->
+        <a href="../index.html" class="logo">Trøjborg Bryg</a>
+        <button class="burger-btn">&#9776;</button>
+        <!-- Navigations bar-->
+        <nav class="nav-bar">
+            <a href="#">Køb Online</a>
+      
+            <!-- Her laver jeg en dropdown-container for "Vores øl" -->
+            <div class="dropdown">
+              <a href="/Vores-øl/vores.html">Vores øl</a>
+
+              <!-- Content for dropdown-container -->
+              <div class="dropdown-content">
+                <a href="/Vores-øl/vores.html#beer1">Klassisk</a>
+                <a href="/Vores-øl/vores.html#beer2">Special</a>
+                <a href="/Vores-øl/vores.html#beer3">Julebryg</a>
+              </div>
+            </div>
+      
+            <a href="/Jeres-Oplevelser/jeres.html">Jeres oplevelser</a>
+            <a href="/Om-os/om.html">Om os</a>
+            <a href="/Kontakt/kontakt.html">Kontakt</a>
+          </nav>
+
+          <!-- Java-script, der gør at burgermenuen kun fungerer i media query -->
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const burgerBtn = document.querySelector('.burger-btn');
+                const navBar = document.querySelector('.nav-bar');
+        
+                burgerBtn.addEventListener('click', function() {
+                    if (window.innerWidth <= 1350) {
+                        navBar.classList.toggle('active');
+                    }
+                });
+            });
+        </script>
+    </header>
+
+    <!-- Her indsætter jeg alt content, som står under "Seneste nyt". Derfor bruger jeg her "article", som
+    fungerer lidt ligesom en "section". Jeg har mere styr på indholdet ved at bruge "article"-->
+    <article class="mid-section">
+        <h1>Seneste nyt</h1>
+
+        <h2>Kom til ølsmagning d. 26/12</h2>
+
+        <h3>Prøv vores ny variant!</h3>
+
+        <a href="/Vores-øl/vores.html" class="variant">Find den her</a>
+        <a href="#"  class="tilmeld">Tilmeld dig her</a>
+        
+
+        <div class="mid-section-content">
+
+            <div class="news1">
+                <img src="/images/ny-øl.webp" alt="">
+                <p>Den er her igen! Gør din jul mere festlig med vores lækre alkoholfrie juleøl. Prøv vores unikke blandning, der afspejler den traditionelle julesmag.</p>
+            </div>
+
+            
+            <div class="news2">
+                <img src="/images/smagning.webp" alt="">
+                <p>Oplev en ekstraordinær aften hvor I kan smage vores håndværksbryg. Vi guider jer igennem en fantastisk aften og træder ind i ølbrygningens verden.</p>
+            </div>
+            
+
+        </div>
+
+        
+
+    </article>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+
+        <ul>
+            <li><a href="">Vilkår og betingelser</a></li>
+            <li><a href="/Kontakt/kontakt.html">Kontakt</a></li>
+            <li><a href="">Privatlivspolitik</a></li>
+            <li><a href="">Cookiepolitik</a></li>
+        </ul>
+
+        <p class="copyright">TroejborgBryg @ 2023</p>
+    </footer>
+    
+</body>
+</html>

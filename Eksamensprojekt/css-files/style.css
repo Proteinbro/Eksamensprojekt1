@@ -1,0 +1,586 @@
+@import url('https://fonts.cdnfonts.com/css/old-english-five');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    min-height: 100vh;
+    background: url(../images/forside.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Den følgende kode opstiller min navbar, hvor jeg har en hover effekt over "a" */ 
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 75px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    font-size: 32px;
+    font-family: 'Old English Five', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-bar a{
+    position: relative;
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 55px;
+}
+
+.nav-bar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 5%;
+    background: #000;
+}
+
+.nav-bar a:hover:before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.burger-btn{
+    display: none;
+}
+
+
+/* For at style min dropdown-container skriver jeg følgende kode for at  */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 16px 0;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+/* Her begynder jeg at style min sektion med nyheder blandt andet ved hjælp af flexbox */
+
+.mid-section{
+    position: absolute;
+    top: 92%;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background: #fff;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.mid-section h1{
+    font-size: 22px;
+}
+
+.mid-section h2{
+    font-size: 35px;
+    position: absolute;
+    top: 20%;
+    left: 53.5%;
+    color: rgb(122, 80, 18)
+}
+
+.mid-section h3{
+    font-size: 35px;
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    color: rgb(122, 80, 18)
+}
+
+.mid-section-content{
+    display: flex;
+    padding: 130px 160px;
+
+}
+
+.news1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.news1 p{
+    width: 60%;
+    font-size: 18px;
+    color: #757575;
+}
+
+.news1 img{
+    width: 300px;
+}
+
+.news2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.news2 p{
+    width: 60%;
+    font-size: 18px;
+    color: #757575;
+}
+
+.news2 img{
+    width: 300px;
+}
+
+.variant{
+    position: absolute;
+    top: 53%;
+    left: 38%;
+    text-decoration: none;
+    color: rgb(187, 135, 47);
+    font-size: 18px;
+}
+
+.tilmeld{
+    position: absolute;
+    top: 53%;
+    left: 76.5%;
+    text-decoration: none;
+    color: rgb(187, 135, 47);
+    font-size: 18px;
+}
+
+.mid-section a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 5%;
+    background: rgb(187, 135, 47);
+}
+
+.mid-section a:hover:before{
+    width: 100%;
+    transition: 0.5s;
+}
+
+/* Følgende del styler min footer*/
+
+.footer{
+    padding: 25px;
+    background-color: rgb(170, 155, 128);
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+}
+
+.footer, .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #000;
+}
+
+.social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.3;
+    transition: 0.25s;
+}
+
+.social a:hover{
+    opacity: 1;
+}
+
+.footer h1{
+    font-size: 50px;
+    padding-bottom: 20px;
+    transition: 0.5s;
+}
+
+.footer h1:hover{
+    opacity: 1;
+}
+
+
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a{
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.3;
+    transition: 0.5s;
+}
+
+.footer ul li a:hover{
+    opacity: 1;
+}
+
+
+.footer, .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+
+/* Her starter jeg mine media queries, således jeg kan tilpasse mine elementer til skærmstørrelse*/
+
+@media only screen and (max-width: 600px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mid-section {
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .mid-section h2,
+    .mid-section h3 {
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+
+    .mid-section h2{
+        top: 54%;
+        left: 50%;
+    }
+
+    .mid-section h3{
+        top: 10%;
+        left: 50%;
+    }
+
+    .mid-section-content {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+
+    .news1{
+        margin-bottom: 120px;
+    }
+
+    .news1,
+    .news2 {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .news1 p,
+    .news2 p {
+        width: 100%;
+    }
+
+    .news1 img,
+    .news2 img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .variant,
+    .tilmeld {
+        position: absolute;
+    }
+    
+    .variant{
+        top: 47.5%;
+        left: 41.5%;
+    }
+
+    .tilmeld{
+        top: 94%;
+        left: 40%; 
+    }
+
+    .footer{
+        bottom: -195%;
+    }
+}
+
+/* Nyt media query mellem 601  900 pixels */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mid-section {
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .mid-section h2,
+    .mid-section h3 {
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+
+    .mid-section h2{
+        top: 54%;
+        left: 50%;
+    }
+
+    .mid-section h3{
+        top: 7%;
+        left: 50%;
+    }
+
+    .mid-section-content {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+
+    .news1{
+        margin-bottom: 120px;
+    }
+
+    .news1,
+    .news2 {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .news1 p,
+    .news2 p {
+        width: 78%;
+    }
+
+    .news1 img,
+    .news2 img {
+        width: 78%;
+        margin-top: 20px;
+    }
+
+    .variant,
+    .tilmeld {
+        position: absolute;
+    }
+    
+    .variant{
+        top: 49%;
+        left: 41.5%;
+    }
+
+    .tilmeld{
+        top: 95%;
+        left: 40%; 
+    }
+
+    .footer{
+        bottom: -210%;
+    }
+}
+
+/* Nyt media query mellem 901 og 1350 pixels */
+@media only screen and (min-width: 901px) and (max-width: 1350px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-bar.active {
+        display: flex;
+    }
+
+    .nav-bar a {
+        padding: 15px;
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mid-section {
+        height: auto;
+        padding-top: 30px;
+    }
+
+    .mid-section h2,
+    .mid-section h3 {
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+
+    .mid-section h2{
+        top: 54%;
+        left: 50%;
+    }
+
+    .mid-section h3{
+        top: 7%;
+        left: 50%;
+    }
+
+    .mid-section-content {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+
+    .news1{
+        margin-bottom: 120px;
+    }
+    
+
+    .news1,
+    .news2 {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .news1 p,
+    .news2 p {
+        width: 60%;
+    }
+
+    .news1 img,
+    .news2 img {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    .variant,
+    .tilmeld {
+        position: absolute;
+    }
+    
+    .variant{
+        top: 49%;
+        left: 47%;
+    }
+
+    .tilmeld{
+        top: 98%;
+        left: 46%; 
+    }
+
+    .footer{
+        bottom: -240%;
+    }
+    
+}
